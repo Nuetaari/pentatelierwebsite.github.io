@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width-device-width, initial scale=1.-">
+	<title>Konfirmasi Pembelian</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<script src="js/bootstrap.js"></script>
+	<!---NAVBAR--->
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+		<a href="#" class="navbar-brand"><img src="assets/logo.png" alt="Logo PentAtelier" width="25%" margin-top="15 px" class="d-inline-block align-top"></a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#toggleMobileMenu"
+			aria-controls="toggleMobileMenu"
+			aria-expanded="false"
+			aria-lable="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="toggleMobileMenu">
+			<ul class="navbar-nav ms-auto text-center">
+				<li>
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li>
+					<a class="nav-link" href="allproducts.html">Products</a>
+				</li>
+				<li>
+					<a class="nav-link" href="index.html #about">About</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	
+	<!---FORMULIR--->
+	<div class="container mt-5">
+		<h2>Konfirmasi Pemesanan</h2>
+		<br>
+		<form class="row g-3">
+			<div class="col-md-6">
+				<label for="firstName" class="form-label">Nama Depan</label>
+				<input type="text" class="form-control" id="firstName">
+			</div>
+			<div class="col-md-6">
+				<label for="lastName" class="form-label">Nama Belakang</label>
+				<input type="text" class="form-control" id="lastName">
+			</div>
+			<div class="col-md-8">
+				<label for="emailinfo" class="form-label">Alamat E-mail</label>
+				<input type="email" class="form-control" id="emailinfo">
+			</div>
+			<div class="col-md-4">
+				<label for="phonenumber" class="form-label">Nomor Telepon</label>
+				<input type="text" class="form-control" id="phonenumber">
+			</div>
+			<div class="col-md-12">
+				<label for="address" class="form-label">Alamat Penerima</label>
+				<textarea class="form-control" id="address" rows="2"></textarea>
+			</div>
+			<div class="col-12 col-md-6 penjumlahan">
+				<p>Daftar Pemesanan Beserta Jumlah</p>
+				<ul>
+					<li style="margin-bottom:5px">PentAtelier Début 314B  : <input type="text" name="" id="bil1"></li>
+					<li style="margin-bottom:5px">PentAtelier Régis 1011B : <input type="text" name="" id="bil2"></li>
+					<li style="margin-bottom:5px">PentAtelier Régis 1729B : <input type="text" name="" id="bil3"></li>
+					<li style="margin-bottom:5px">PentAtelier Natur 2204A : <input type="text" name="" id="bil4"></li>
+					<li style="margin-bottom:5px">PentAtelier Natur 1707C : <input type="text" name="" id="bil5"></li>
+					<li style="margin-bottom:5px">PentAtelier Régis 0111C <span style="color:#FFF">.</span>:<input type="text" name="" id="bil6"></li>
+					<li style="margin-bottom:5px">PentAtelier Début 1212C : <input type="text" name="" id="bil7"></li>
+					<li style="margin-bottom:5px;">PentAtelier Régis 2323C <span style="color:#FFF">.</span>:<input type="text" name="" id="bil8"></li>
+					<li style="margin-bottom:5px">Membership Tier B <span style="color:#FFF">..........</span>: <input type="text" name="" id="bil9"></li>
+					<li style="margin-bottom:5px">Membership Tier A <span style="color:#FFF">..........</span>: <input type="text" name="" id="bil10"></li>
+					<li style="margin-bottom:5px">Membership Tier S <span style="color:#FFF">..........</span>: <input type="text" name="" id="bil11"></li>
+				</ul>
+			</div>
+			<div class="col-md-6 penjumlahan">
+				<p>Harga Total</p>
+				<input type="text" name="" id="total">
+				<img src="assets/watson.gif" width="75%">
+			
+			<!---Script Penjumlahan--->
+			<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<script type="text/javascript">
+			$(".penjumlahan").keyup(function(){
+				var bil1 = parseInt($("#bil1").val())
+				var bil2 = parseInt($("#bil2").val())
+				var bil3 = parseInt($("#bil3").val())
+				var bil4 = parseInt($("#bil4").val())
+				var bil5 = parseInt($("#bil5").val())
+				var bil6 = parseInt($("#bil6").val())
+				var bil7 = parseInt($("#bil7").val())
+				var bil8 = parseInt($("#bil8").val())
+				var bil9 = parseInt($("#bil9").val())
+				var bil10 = parseInt($("#bil10").val())
+				var bil11 = parseInt($("#bil11").val())
+			
+				var total = 599999*bil1+ 1799999*bil2+ 7499999*bil3+ 1899999*bil4+ 99999*bil5+ 299999*bil6+ 699999*bil7+ 1499999*bil8+ 99999*bil9+ 199999*bil10+ 399999*bil11;
+				$("#total").attr("value",total)
+			});
+			</script>
+			<!---Script Penjumlahan Selesai--->
+			</div>
+			
+			<div class="col-md-12">
+				<p>Metode Pembayaran</p>
+				<form>
+				<input type="radio" id="CashOnDelivery" name="metodepembayaran"><label for="CashOnDelivery" style="margin-right:10px;"> Cash On Delivery</label>
+				<input type="radio" id="kreditdebit" name="metodepembayaran"><label for="kreditdebit"> Kartu Kredit/Debit</label>
+				</form>
+			</div>
+			<br>
+			<div class="col-md-12">
+				<label for="comment" class="form-label">Informasi dan Pesan Tambahan</label>
+				<textarea class="form-control" id="comment" rows="3"></textarea>
+			</div>
+			<br>
+			<div class="col-md-12">
+				<a href="pesananterkonfirmasi.html"><button class="btn btn-dark">
+				<a href="pesananterkonfirmasi.html" style="text-decoration:none; color:#FFF">
+				Submit
+				</a>
+				</button></a>
+			</div>
+		</form>
+	</div>
+	<br>
+
+</body>
+</html>

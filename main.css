@@ -1,0 +1,17 @@
+.textaboveimg {
+	background-image: url(assets/membership.png);
+	width:100%
+}
+
+.accordion-button:not(.collapsed){
+	background:#FFF;
+}
+
+.card-img-top:hover{
+	opacity:0.75;
+	transition-duration:0.7s;
+}
+.card-img-top{
+	opacity:1;
+	transition-duration:0.7s;
+}
