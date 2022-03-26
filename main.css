@@ -15,3 +15,13 @@
 	opacity:1;
 	transition-duration:0.7s;
 }
+
+.btn-dark:hover{
+	background-color:#D4AF37;
+	color:#222;
+}
+
+.btn-light:hover{
+	background-color:#D4AF37;
+	color:#222;
+}
